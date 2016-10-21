@@ -20,13 +20,10 @@ public class HeroResourceIT {
     WebDriver browser;
 
     @Test
-    public void copy(@InitialPage AdessoPage page) {
-        String expected = "meteo";
-
-        page.search(expected);
+    public void copy(@InitialPage HeroPage page) {
+        String expected = "Black Panther";
         String pageSource = browser.getPageSource();
-
-        assertThat(pageSource, containsString("Credit Suisse"));
+        assertThat(pageSource, containsString(expected));
     }
 
 }
