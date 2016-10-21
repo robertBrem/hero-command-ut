@@ -20,7 +20,7 @@ public class HeroResourceIT {
     WebDriver browser;
 
     @Test
-    public void copy(@InitialPage HeroPage page) {
+    public void initialTest(@InitialPage HeroPage page) {
         String expected = "Black Panther";
         String pageSource = browser.getPageSource();
         assertThat(pageSource, containsString(expected));
